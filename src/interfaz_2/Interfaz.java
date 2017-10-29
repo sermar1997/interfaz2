@@ -5,6 +5,9 @@
  */
 package interfaz_2;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Sergio
@@ -31,6 +34,7 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupSexo = new javax.swing.ButtonGroup();
         jTabbedPanePestañas = new javax.swing.JTabbedPane();
         jPanelPresentacion = new javax.swing.JPanel();
         jButtonFormulario = new javax.swing.JButton();
@@ -38,6 +42,24 @@ public class Interfaz extends javax.swing.JFrame {
         jButtonCerrar = new javax.swing.JButton();
         jTextAreaDescripcion = new javax.swing.JTextArea();
         jPanelFormulario = new javax.swing.JPanel();
+        jLabelTitulo = new javax.swing.JLabel();
+        jLabelNombre = new javax.swing.JLabel();
+        jLabelEmail = new javax.swing.JLabel();
+        jLabelCiudad = new javax.swing.JLabel();
+        jTextFieldNombre = new javax.swing.JTextField();
+        jTextFieldEmail = new javax.swing.JTextField();
+        jComboBoxCiudad = new javax.swing.JComboBox<>();
+        jPanelAficionesySexo = new javax.swing.JPanel();
+        jLabelAficiones = new javax.swing.JLabel();
+        jCheckBoxCine = new javax.swing.JCheckBox();
+        jCheckBoxMusica = new javax.swing.JCheckBox();
+        jCheckBoxDeportes = new javax.swing.JCheckBox();
+        jCheckBoxLectura = new javax.swing.JCheckBox();
+        jLabelSexo = new javax.swing.JLabel();
+        jRadioButtonMasculino = new javax.swing.JRadioButton();
+        jRadioButtonFemenino = new javax.swing.JRadioButton();
+        jButtonLimpiar = new javax.swing.JButton();
+        jButtonVolver = new javax.swing.JButton();
         jPanelConvertidor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -73,7 +95,7 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPresentacionLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jTextAreaDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addGroup(jPanelPresentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonConvertidor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonCerrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -91,7 +113,7 @@ public class Interfaz extends javax.swing.JFrame {
                         .addComponent(jButtonConvertidor))
                     .addGroup(jPanelPresentacionLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addComponent(jTextAreaDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE)))
+                        .addComponent(jTextAreaDescripcion, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addComponent(jButtonCerrar)
                 .addGap(24, 24, 24))
@@ -99,15 +121,153 @@ public class Interfaz extends javax.swing.JFrame {
 
         jTabbedPanePestañas.addTab("Presentación", jPanelPresentacion);
 
+        jLabelTitulo.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabelTitulo.setText("RELLENE EL SIGUIENTE FORMULARIO");
+
+        jLabelNombre.setText("Nombre:");
+
+        jLabelEmail.setText("Email:");
+
+        jLabelCiudad.setText("Ciudad:");
+
+        jComboBoxCiudad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alicante", "Madrid", "Teruel", "Zaragoza" }));
+
+        jLabelAficiones.setText("Aficiones:");
+
+        jCheckBoxCine.setText("Cine");
+
+        jCheckBoxMusica.setText("Musica");
+
+        jCheckBoxDeportes.setText("Deportes");
+
+        jCheckBoxLectura.setText("Lectura");
+
+        jLabelSexo.setText("Sexo:");
+
+        buttonGroupSexo.add(jRadioButtonMasculino);
+        jRadioButtonMasculino.setText("Masculino");
+
+        buttonGroupSexo.add(jRadioButtonFemenino);
+        jRadioButtonFemenino.setText("Femenino");
+
+        javax.swing.GroupLayout jPanelAficionesySexoLayout = new javax.swing.GroupLayout(jPanelAficionesySexo);
+        jPanelAficionesySexo.setLayout(jPanelAficionesySexoLayout);
+        jPanelAficionesySexoLayout.setHorizontalGroup(
+            jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAficionesySexoLayout.createSequentialGroup()
+                .addGroup(jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelSexo)
+                    .addComponent(jLabelAficiones, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(63, 63, 63))
+            .addGroup(jPanelAficionesySexoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAficionesySexoLayout.createSequentialGroup()
+                        .addGroup(jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jRadioButtonFemenino, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jRadioButtonMasculino, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanelAficionesySexoLayout.createSequentialGroup()
+                        .addGroup(jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBoxMusica)
+                            .addComponent(jCheckBoxCine, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                        .addGroup(jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jCheckBoxDeportes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jCheckBoxLectura, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+        );
+        jPanelAficionesySexoLayout.setVerticalGroup(
+            jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAficionesySexoLayout.createSequentialGroup()
+                .addComponent(jLabelAficiones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGroup(jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxCine)
+                    .addComponent(jCheckBoxDeportes))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelAficionesySexoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxMusica)
+                    .addComponent(jCheckBoxLectura))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabelSexo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButtonMasculino)
+                .addGap(16, 16, 16)
+                .addComponent(jRadioButtonFemenino))
+        );
+
+        jButtonLimpiar.setText("Limpiar");
+        jButtonLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLimpiarActionPerformed(evt);
+            }
+        });
+
+        jButtonVolver.setText("Volver");
+        jButtonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolverActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelFormularioLayout = new javax.swing.GroupLayout(jPanelFormulario);
         jPanelFormulario.setLayout(jPanelFormularioLayout);
         jPanelFormularioLayout.setHorizontalGroup(
             jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 484, Short.MAX_VALUE)
+            .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabelTitulo))
+                    .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jLabelNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabelCiudad, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(46, 46, 46)
+                                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextFieldNombre)
+                                    .addComponent(jComboBoxCiudad, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                                .addComponent(jPanelAficionesySexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButtonLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButtonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(92, 92, 92))
         );
         jPanelFormularioLayout.setVerticalGroup(
             jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 331, Short.MAX_VALUE)
+            .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jLabelTitulo)
+                .addGap(27, 27, 27)
+                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelNombre)
+                    .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelEmail)
+                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelCiudad)
+                    .addComponent(jComboBoxCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelFormularioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLimpiar)
+                        .addGap(58, 58, 58)
+                        .addComponent(jButtonVolver)
+                        .addGap(61, 61, 61))
+                    .addGroup(jPanelFormularioLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelAficionesySexo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
 
         jTabbedPanePestañas.addTab("Formulario", jPanelFormulario);
@@ -116,11 +276,11 @@ public class Interfaz extends javax.swing.JFrame {
         jPanelConvertidor.setLayout(jPanelConvertidorLayout);
         jPanelConvertidorLayout.setHorizontalGroup(
             jPanelConvertidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 484, Short.MAX_VALUE)
+            .addGap(0, 510, Short.MAX_VALUE)
         );
         jPanelConvertidorLayout.setVerticalGroup(
             jPanelConvertidorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 331, Short.MAX_VALUE)
+            .addGap(0, 383, Short.MAX_VALUE)
         );
 
         jTabbedPanePestañas.addTab("Convertidor", jPanelConvertidor);
@@ -133,9 +293,7 @@ public class Interfaz extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jTabbedPanePestañas)
-                .addContainerGap())
+            .addComponent(jTabbedPanePestañas, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
         );
 
         jTabbedPanePestañas.getAccessibleContext().setAccessibleName("Presentacion");
@@ -144,17 +302,38 @@ public class Interfaz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonFormularioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFormularioActionPerformed
-        jTabbedPanePestañas.setEnabledAt(1,true);
+        jTabbedPanePestañas.setEnabledAt(1, true);
         jTabbedPanePestañas.setSelectedIndex(1);
     }//GEN-LAST:event_jButtonFormularioActionPerformed
 
     private void jButtonConvertidorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConvertidorActionPerformed
-jTabbedPanePestañas.setEnabledAt(2,true);
+        jTabbedPanePestañas.setEnabledAt(2, true);
         jTabbedPanePestañas.setSelectedIndex(2);    }//GEN-LAST:event_jButtonConvertidorActionPerformed
 
     private void jButtonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCerrarActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButtonCerrarActionPerformed
+
+    private void jButtonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarActionPerformed
+        jTextFieldNombre.setText("");
+        jTextFieldEmail.setText("");
+        jCheckBoxCine.setSelected(false);
+        jCheckBoxDeportes.setSelected(false);
+        jCheckBoxLectura.setSelected(false);
+        jCheckBoxMusica.setSelected(false);
+        jButtonLimpiar.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                buttonGroupSexo.clearSelection();
+
+            }
+        });
+    }//GEN-LAST:event_jButtonLimpiarActionPerformed
+
+    private void jButtonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolverActionPerformed
+        jTabbedPanePestañas.setEnabledAt(0, true);
+        jTabbedPanePestañas.setSelectedIndex(0);    }//GEN-LAST:event_jButtonVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,13 +371,32 @@ jTabbedPanePestañas.setEnabledAt(2,true);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupSexo;
     private javax.swing.JButton jButtonCerrar;
     private javax.swing.JButton jButtonConvertidor;
     private javax.swing.JButton jButtonFormulario;
+    private javax.swing.JButton jButtonLimpiar;
+    private javax.swing.JButton jButtonVolver;
+    private javax.swing.JCheckBox jCheckBoxCine;
+    private javax.swing.JCheckBox jCheckBoxDeportes;
+    private javax.swing.JCheckBox jCheckBoxLectura;
+    private javax.swing.JCheckBox jCheckBoxMusica;
+    private javax.swing.JComboBox<String> jComboBoxCiudad;
+    private javax.swing.JLabel jLabelAficiones;
+    private javax.swing.JLabel jLabelCiudad;
+    private javax.swing.JLabel jLabelEmail;
+    private javax.swing.JLabel jLabelNombre;
+    private javax.swing.JLabel jLabelSexo;
+    private javax.swing.JLabel jLabelTitulo;
+    private javax.swing.JPanel jPanelAficionesySexo;
     private javax.swing.JPanel jPanelConvertidor;
     private javax.swing.JPanel jPanelFormulario;
     private javax.swing.JPanel jPanelPresentacion;
+    private javax.swing.JRadioButton jRadioButtonFemenino;
+    private javax.swing.JRadioButton jRadioButtonMasculino;
     private javax.swing.JTabbedPane jTabbedPanePestañas;
     private javax.swing.JTextArea jTextAreaDescripcion;
+    private javax.swing.JTextField jTextFieldEmail;
+    private javax.swing.JTextField jTextFieldNombre;
     // End of variables declaration//GEN-END:variables
 }
